@@ -6,22 +6,44 @@
     <script type="text/javascript">
       function loadimages(number){
         document.getElementById("image"+number).setAttribute("src", number+".jpg");
+        document.querySelector("body").classList.add("image");
+      }
+
+      function close(){
+        document.querySelector('body').classList.remove('image');
       }
     </script>
     <style media="screen">
       img {
         width: 30vw;
       }
+      body:not(.image){
+        background: black;
+      }
+      body.image {
+        background: white;
+      }
     </style>
   </head>
   <body>
-    <button type="button" name="button" onclick="loadimages('1')"></button>
+    <a href="#1">
+      <button type="button" name="button" onclick="loadimages('1')">1</button>
+    </a>
     <img src="" alt="a" id="image1">
-    <button type="button" name="button" onclick="loadimages('2')"></button>
+    <a href="#2">
+      <button type="button" name="button" onclick="loadimages('2')">2</button>
+    </a>
     <img src="" alt="a" id="image2">
-    <button type="button" name="button" onclick="loadimages('3')"></button>
+    <a href="#3">
+      <button type="button" name="button" onclick="loadimages('3')">3</button>
+    </a>
     <img src="" alt="a" id="image3">
-    <button type="button" name="button" onclick="loadimages('4')"></button>
+    <a href="#4">
+      <button type="button" name="button" onclick="loadimages('4')">4</button>
+    </a>
     <img src="" alt="a" id="image4">
+    <a href="">
+      <button type="button" name="button" onclick="close()">close</button>
+    </a>
   </body>
 </html>
