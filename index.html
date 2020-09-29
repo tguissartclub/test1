@@ -7,43 +7,48 @@
       function loadimages(number){
         document.getElementById("image"+number).setAttribute("src", number+".jpg");
         document.querySelector("body").classList.add("image");
+        console.log(location.href);
+        console.log(location.hash);
       }
 
-      function close(){
-        document.querySelector('body').classList.remove('image');
+      function hiromi(){
+        document.querySelector("body").classList.remove("image");
+        console.log(location.href);
+        console.log(location.hash);
       }
+
     </script>
     <style media="screen">
       img {
         width: 30vw;
       }
-      body:not(.image){
+      body{
         background: black;
       }
+
       body.image {
         background: white;
       }
+
     </style>
   </head>
   <body>
-    <a href="#1">
+    <a href="#a1">
       <button type="button" name="button" onclick="loadimages('1')">1</button>
     </a>
     <img src="" alt="a" id="image1">
-    <a href="#2">
+    <a href="#a2">
       <button type="button" name="button" onclick="loadimages('2')">2</button>
     </a>
     <img src="" alt="a" id="image2">
-    <a href="#3">
+    <a href="#a3">
       <button type="button" name="button" onclick="loadimages('3')">3</button>
     </a>
     <img src="" alt="a" id="image3">
-    <a href="#4">
+    <a href="#a4">
       <button type="button" name="button" onclick="loadimages('4')">4</button>
     </a>
     <img src="" alt="a" id="image4">
-    <a href="">
-      <button type="button" name="button" onclick="close()">close</button>
-    </a>
+      <button type="button" name="button" onclick="hiromi()">close</button>
   </body>
 </html>
