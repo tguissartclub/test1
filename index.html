@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
-      function loadimages(){
-        document.getElementById("image1").setAttribute("src", "1.jpg");
-        document.getElementById("image2").setAttribute("src", "2.jpg");
-        document.getElementById("image3").setAttribute("src", "3.jpg");
-        document.getElementById("image4").setAttribute("src", "4.jpg");
-
+      function loadimages(number){
+        document.getElementById("image"+number).setAttribute("src", number+".jpg");
       }
     </script>
+    <style media="screen">
+      img {
+        width: 30vw;
+      }
+    </style>
   </head>
   <body>
-    <button type="button" name="button" onclick="loadimages()"></button>
+    <button type="button" name="button" onclick="loadimages('1')"></button>
     <img src="" alt="a" id="image1">
+    <button type="button" name="button" onclick="loadimages('2')"></button>
     <img src="" alt="a" id="image2">
+    <button type="button" name="button" onclick="loadimages('3')"></button>
     <img src="" alt="a" id="image3">
+    <button type="button" name="button" onclick="loadimages('4')"></button>
     <img src="" alt="a" id="image4">
   </body>
 </html>
